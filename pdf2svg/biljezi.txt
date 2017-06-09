@@ -1,0 +1,48 @@
+
+"poppler-0.51/bin/pdftocairo.exe" -svg "pdf/hvs2016.0010001.NORMAL.pdf" "svg/asdhvs2016.0010001.NORMAL.svg"
+"poppler-0.51/bin/pdftocairo.exe" -svg "pdf/hvs2016.0020002.NORMAL.pdf" "svg/asdhvs2016.0020002.NORMAL.svg"
+"poppler-0.51/bin/pdftocairo.exe" -svg "pdf/hvs2016.0bd00a9.NORMAL.pdf" "svg/asdhvs2016.0bd00a9.NORMAL.svg"
+"poppler-0.51/bin/pdftocairo.exe" -svg "pdf/hvs2016.0be00aa.NORMAL.pdf" "svg/asdhvs2016.0be00aa.NORMAL.svg"
+"poppler-0.51/bin/pdftocairo.exe" -svg "hvs2016.0010001.NORMAL.pdf" "svg/asdhvs2016.0010001.NORMAL.svg"
+"poppler-0.51/bin/pdftocairo.exe" -svg "hvs2016.0020002.NORMAL.pdf" "svg/asdhvs2016.0020002.NORMAL.svg"
+"poppler-0.51/bin/pdftocairo.exe" -svg "hvs2016.0bd00a9.NORMAL.pdf" "svg/asdhvs2016.0bd00a9.NORMAL.svg"
+"poppler-0.51/bin/pdftocairo.exe" -svg "hvs2016.0be00aa.NORMAL.pdf" "svg/asdhvs2016.0be00aa.NORMAL.svg"
+"poppler-0.51/bin/pdftocairo.exe" -svg "hvs2016.0010001.NORMAL.pdf" "svg/asdhvs2016.0010001.NORMAL.svg"
+"poppler-0.51/bin/pdftocairo.exe" -svg "hvs2016.0bd00a9.NORMAL.pdf" "svg/asdhvs2016.0bd00a9.NORMAL.svg"
+"poppler-0.51/bin/pdftocairo.exe" -svg "hvs2016.0020002.NORMAL.pdf" "svg/asdhvs2016.0020002.NORMAL.svg"
+"poppler-0.51/bin/pdftocairo.exe" -svg "hvs2016.0be00aa.NORMAL.pdf" "svg/asdhvs2016.0be00aa.NORMAL.svg"
+"poppler-0.51/bin/pdftocairo.exe" -svg "hvs2016.0010001.NORMAL.pdf" "svg/asdhvs2016.0010001.NORMAL.svg"
+"poppler-0.51/bin/pdftocairo.exe" -svg "hvs2016.0020002.NORMAL.pdf" "svg/asdhvs2016.0020002.NORMAL.svg"
+"poppler-0.51/bin/pdftocairo.exe" -svg "hvs2016.0bd00a9.NORMAL.pdf" "svg/asdhvs2016.0bd00a9.NORMAL.svg"
+"poppler-0.51/bin/pdftocairo.exe" -svg "hvs2016.0be00aa.NORMAL.pdf" "svg/asdhvs2016.0be00aa.NORMAL.svg"
+"poppler-0.51/bin/pdftocairo.exe" -svg "hvs2016.0010001.NORMAL.pdf" "svg/asdhvs2016.0010001.NORMAL.svg"
+"poppler-0.51/bin/pdftocairo.exe" -svg "hvs2016.0020002.NORMAL.pdf" "svg/asdhvs2016.0020002.NORMAL.svg"
+"poppler-0.51/bin/pdftocairo.exe" -svg "hvs2016.0bd00a9.NORMAL.pdf" "svg/asdhvs2016.0bd00a9.NORMAL.svg"
+"poppler-0.51/bin/pdftocairo.exe" -svg "hvs2016.0be00aa.NORMAL.pdf" "svg/asdhvs2016.0be00aa.NORMAL.svg"
+"poppler-0.51/bin/pdftocairo.exe" -svg "hvs2016.0010001.NORMAL.pdf" "svg/asdhvs2016.0010001.NORMAL.svg"
+"poppler-0.51/bin/pdftocairo.exe" -svg "hvs2016.0020002.NORMAL.pdf" "svg/asdhvs2016.0020002.NORMAL.svg"
+"poppler-0.51/bin/pdftocairo.exe" -svg "hvs2016.0bd00a9.NORMAL.pdf" "svg/asdhvs2016.0bd00a9.NORMAL.svg"
+"poppler-0.51/bin/pdftocairo.exe" -svg "hvs2016.0be00aa.NORMAL.pdf" "svg/asdhvs2016.0be00aa.NORMAL.svg"
+"poppler-0.51/bin/pdftocairo.exe" -svg "hvs2016.0010001.NORMAL.pdf" "svg/asdhvs2016.0010001.NORMAL.svg"
+"poppler-0.51/bin/pdftocairo.exe" -svg "hvs2016.0020002.NORMAL.pdf" "svg/asdhvs2016.0020002.NORMAL.svg"
+"poppler-0.51/bin/pdftocairo.exe" -svg "hvs2016.0bd00a9.NORMAL.pdf" "svg/asdhvs2016.0bd00a9.NORMAL.svg"
+"poppler-0.51/bin/pdftocairo.exe" -svg "hvs2016.0be00aa.NORMAL.pdf" "svg/asdhvs2016.0be00aa.NORMAL.svg"
+"poppler-0.51/bin/pdftocairo.exe" -svg "hvs2016.0010001.NORMAL.pdf" "svg/asdhvs2016.0010001.NORMAL.svg"
+"poppler-0.51/bin/pdftocairo.exe" -svg "hvs2016.0020002.NORMAL.pdf" "svg/asdhvs2016.0020002.NORMAL.svg"
+"poppler-0.51/bin/pdftocairo.exe" -svg "hvs2016.0bd00a9.NORMAL.pdf" "svg/asdhvs2016.0bd00a9.NORMAL.svg"
+"poppler-0.51/bin/pdftocairo.exe" -svg "hvs2016.0be00aa.NORMAL.pdf" "svg/asdhvs2016.0be00aa.NORMAL.svg"
+"poppler-0.51/bin/pdftocairo.exe" -svg "hvs2016.0010001.NORMAL.pdf" "svg/asdhvs2016.0010001.NORMAL.svg"
+"poppler-0.51/bin/pdftocairo.exe" -svg "hvs2016.0020002.NORMAL.pdf" "svg/asdhvs2016.0020002.NORMAL.svg"
+"poppler-0.51/bin/pdftocairo.exe" -svg "hvs2016.0bd00a9.NORMAL.pdf" "svg/asdhvs2016.0bd00a9.NORMAL.svg"
+"poppler-0.51/bin/pdftocairo.exe" -svg "hvs2016.0be00aa.NORMAL.pdf" "svg/asdhvs2016.0be00aa.NORMAL.svg"
+"poppler-0.51/bin/pdftocairo.exe" -svg "hvs2016.0010001.NORMAL.pdf" "svg/asdhvs2016.0010001.NORMAL.svg"
+"poppler-0.51/bin/pdftocairo.exe" -svg "hvs2016.0020002.NORMAL.pdf" "svg/asdhvs2016.0020002.NORMAL.svg"
+"poppler-0.51/bin/pdftocairo.exe" -svg "hvs2016.0bd00a9.NORMAL.pdf" "svg/asdhvs2016.0bd00a9.NORMAL.svg"
+"poppler-0.51/bin/pdftocairo.exe" -svg "hvs2016.0c100ad.NORMAL.pdf" "svg/asdhvs2016.0c100ad.NORMAL.svg"
+"poppler-0.51/bin/pdftocairo.exe" -svg "hvs2016.0be00aa.NORMAL.pdf" "svg/asdhvs2016.0be00aa.NORMAL.svg"
+"poppler-0.51/bin/pdftocairo.exe" -svg "hvs2016.0c200ae.NORMAL.pdf" "svg/asdhvs2016.0c200ae.NORMAL.svg"
+"poppler-0.51/bin/pdftocairo.exe" -svg "hvs2016.0c3001e.NORMAL.pdf" "svg/asdhvs2016.0c3001e.NORMAL.svg"
+"poppler-0.51/bin/pdftocairo.exe" -svg "hvs2016.0c400af.NORMAL.pdf" "svg/asdhvs2016.0c400af.NORMAL.svg"
+"poppler-0.51/bin/pdftocairo.exe" -svg "hvs2016.0c500b0.NORMAL.pdf" "svg/asdhvs2016.0c500b0.NORMAL.svg"
+"poppler-0.51/bin/pdftocairo.exe" -svg "hvs2016.0c600b1.NORMAL.pdf" "svg/asdhvs2016.0c600b1.NORMAL.svg"
+"poppler-0.51/bin/pdftocairo.exe" -svg "hvs2016.0c700b2.NORMAL.pdf" "svg/asdhvs2016.0c700b2.NORMAL.svg"

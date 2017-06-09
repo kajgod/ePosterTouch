@@ -1,0 +1,6 @@
+{
+  "name": "pdf2svg-foldering",
+  "version": "0.0.1",
+  "description": "pretvaranje citavog foldera pdf-a u svg-ove",
+  "dependencies": {}
+}
