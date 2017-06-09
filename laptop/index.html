@@ -7,7 +7,7 @@
   <title>e-poster</title>
 </head>
 
-<body>
+<body onload="onLoad()">
 
 
 
@@ -291,6 +291,7 @@
       };
 
       var updateLastPos = function (deltaX, deltaY) {
+        console.log(lastX-x);
         lastX = x;
         lastY = y;
       };
@@ -557,7 +558,7 @@ function sljedeci(){
     </div>
     <!-- GLAVNI DIV -->
     <div class="pinch-zoom-container">
-      <img id="pinch-zoom-image-id" class="pinch-zoom-image" onload="onLoad()" src="images/loading.png">
+      <img id="pinch-zoom-image-id" class="pinch-zoom-image" src="images/loading.png"><!--  onload="onLoad()" -->
     </div>
     <div class="homepejdz">
       <div class="skroler">
