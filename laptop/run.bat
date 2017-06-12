@@ -1,0 +1,1 @@
+"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" -kiosk -fullscreen -incognito -disable-pinch -overscroll-history-navigation=0 "C:\Users\test\Desktop\e-poster TOUCH\laptop\index.html"

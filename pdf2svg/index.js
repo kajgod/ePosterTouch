@@ -15,8 +15,8 @@ fs.readdirSync('./input/').forEach(file => {
     	console.log('Kreirano: png/asd'+file.slice(0,-4)+'.png');
     	console.log('****************************************');
     	fs.appendFile('biljezi.txt','\n\r"poppler-0.51/bin/pdftocairo.exe" -svg "'+file+'" "svg/asd'+file.slice(0,-4)+'.svg"');
-    	jsoni.push({id: brojac, filename: file.slice(0,-4), naslov: "Ovo je naslov", opis: "A ovo je nešto duže zato kaj je to opis.", audio: true, video: true});
+    	jsoni.push({id: brojac, filename: file.slice(0,-4), autori: "dr. Jure Jurić kurčić palčić", naslov: "Ovo je naslov", opis: "A ovo je nešto duže zato kaj je to opis.", audio: true, video: true});
         brojac++;
     }
 });
-fs.writeFile('output/lista.js', 'var lista='+JSON.stringify(jsoni));
+fs.writeFile('output/lista.js', 'var lista='+JSON.stringify(jsoni, null, "\t"));

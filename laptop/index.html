@@ -36,11 +36,11 @@
 ::-webkit-scrollbar-thumb {
     -webkit-border-radius: 10px;
     border-radius: 10px;
-    background: rgba(255,0,0,0.8); 
+    background: rgba(229,132,0,0.8); 
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
 }
 ::-webkit-scrollbar-thumb:window-inactive {
-  background: rgba(255,0,0,0.4); 
+  background: rgba(229,132,0,0.4); 
 }
 
 
@@ -51,6 +51,7 @@
         overflow:hidden;
         color:#fff;
         font-family: "Open Sans", Arial, sans-serif;
+        font-size:17px;
       }
 
       #container {
@@ -80,30 +81,36 @@
         background:url('images/bg.png') transparent;
       }
 
-      /* gorediv */
+      /* desnodiv */
 
-      .gorediv {
+      .desnodiv {
           position: absolute;
-          left: 0px;
-          top: -150px;
-          height: 150px;
-          width:100%;
-      }
-
-      .wake .gorediv {
-         -webkit-animation: gorediv 0.5s forwards;
-          -webkit-animation-delay: 2s;
-          animation: gorediv 0.5s forwards;
-          animation-delay: 2s;
+          right: -480px;
+          top: 0px;
+          height: 1900px;
+          width:460px;
           z-index:1001;
+          padding:10px;
       }
 
-      @-webkit-keyframes gorediv {
-          100% { top: 0; }
+      .desnovidljiv {
+          animation: desnodiv 0.5s forwards;
+          animation-delay: 0s;
       }
 
-      @keyframes gorediv {
-          100% { top: 0; }
+      .desnonevidljiv {        
+          animation: desnoskrij 0.5s forwards;
+          animation-delay: 0s;
+      }
+
+      @keyframes desnodiv {
+          0% {right: -480px;}
+          100% { right: 0; }
+      }
+
+      @keyframes desnoskrij {
+          0% { right: 0; }
+          100% { right: -480px; }
       }
 
       /* doljediv */
@@ -184,13 +191,12 @@
       }
 
       .header-search-input {
-        background:#000;
         border:1px solid #3d3d3d;
         height:30px;
-        border-radius:2px;
+        border-radius:3px;
         position: relative;
         top:-7px;
-        color:#aaa;
+        width:250px;
       }
 
       .dom {
@@ -204,11 +210,91 @@
         overflow-y:scroll;
       }
 
+      .heder {
+        background:#fff;
+        margin-bottom:10px;
+        text-align:center;
+      }
+
+      .drzacslike {
+        height:400px;
+        width:400px;
+        overflow:hidden;
+        border: 1px solid #3d3d3d;
+        padding:5px;
+        border-radius: 4px;
+        float:left;
+        margin:5px;
+        background:#181818;
+      }
+
+      .drzacslike .naslov {
+        color:#f58400;
+        font-size:21px;
+      }
+
+      .drzacslike .opis {
+        font-size: 12px;
+        margin-top: 10px;
+      }
+
+      .drzacslike img {
+        max-height:225px;
+      }
+
+      .sredina {
+        width:1688px;
+        margin:auto;
+      }
+
+      .ui-menu-item {
+        max-width:500px;
+      }
+
+      .audiome, .videome {
+          width: 460px;
+      }
+
+      video::-webkit-media-controls-panel {
+          display: flex !important;
+          opacity: 1 !important;
+      }
+
+      .zatvori {    
+        font-size: 26px;
+        width: 40px;
+      }
+
+      .desnodiv div {
+        text-shadow: -2px 2px #000;
+      }
+
+      .desnodiv .naslov {
+        color:#f58400;
+        font-size:34px;
+      }
+
+      .desnodiv .autori {
+        font-size:24px;
+      }
+
+      .desnodiv .opis {
+        font-size: 17px;
+        margin-top: 10px;
+      }
+
     </style>
 
     <script src="js/hammer.js"></script>
-    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.min.js?v=3.2.1"></script>
     <script src="output/lista.js"></script>
+
+    <!-- keyboard -->
+    <link href="js/jquery-ui.min.css" rel="stylesheet">
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery.keyboard.extension-autocomplete.js"></script>
+    <script src="js/jquery.keyboard.js"></script>
+    <link href="js/keyboard.css" rel="stylesheet">
 
     <script>
 
@@ -454,7 +540,8 @@ $(function(){
   /*  if(brojsleep>1){
        $('#container').removeClass('wake').addClass('sleep');
       }*/
-    if(brojsleep>120)deepsleep();
+      /* sekunde za spavanje = 5*60 elem 5 minuta */
+    if(brojsleep>300)deepsleep();
     brojsleep++;
   }, 1000);
 });
@@ -462,31 +549,110 @@ $(function(){
 // buđenje iz sna
 function wake(){  
   brojsleep=0;
-  /*$('#container').addClass('wake').removeClass('sleep');
-  $('#container').removeClass('deepsleep');*/
-
+  /*$('#container').addClass('wake').removeClass('sleep');*/
+  $('#container').removeClass('deepsleep');
 }
 
 //dubokisan
 function deepsleep(){
+  brojsleep=0;
   $('#container').addClass('deepsleep');
+  home();
+  $('.homepejdz').scrollTop(0);
 }
 
+/* glupi array */
+function arraySearch(arr,val) {
+  console.log(arr);
+  console.log(val);
+    for (var i=0; i<arr.length; i++)
+        if (arr[i] === val)                    
+            return i;
+    return false;
+  }
 
 /* glavno */
 var aktualni=0;
 $(function(){
   var html='';
+  var tagovi=[];
   console.log(lista);
   for(var list in lista){console.log(list);
-    html+='<div class="drzacslike">';
-    html+='<img src="output/'+lista[list].filename+'.png-1.png" alt="" onclick="otvori('+lista[list].id+')">';
+    html+='<div class="drzacslike" onclick="otvori('+lista[list].id+')">';
+    html+='<img src="output/'+lista[list].filename+'.png-1.png" alt="">';
+    html+='<div class="naslov">'+lista[list].naslov+'</div>';
+    html+='<div class="autori">'+lista[list].autori+'</div>';
+    html+='<div class="opis">'+lista[list].opis+'</div>';
     html+='</div>';
+    tagovi.push(lista[list].naslov+', '+lista[list].autori+'');
   }
-  $('.skroler').append(html);
+  $('.skroler').append('<div class="sredina">'+html+'</div>');
   $('.pinch-zoom-container').hide();
+  tipkovnica(tagovi);
+  console.log(tagovi);
   //$('.doljediv .slike').width(100+500*lista.length+'px');
+  $('.unutra').hide();
+
+  /* svi eventi */
+  $( 'body' ).bind( 'touchstart click', function(event) {wake();});
+
+  $('.zatvori').click(function(){
+    $('.desnodiv').removeClass('desnovidljiv').addClass('desnonevidljiv');
+    reset();
+  });
 });
+
+var ki;
+function tipkovnica(tagovi){
+  $('#keyboard')
+  .keyboard({
+  layout: 'custom',
+  customLayout: {
+    'normal': [
+      'q w e r t y u i o p {bksp}',
+      'a s d f g h j k l š đ',
+      '{s} z x c v b n m , . {s}',
+      ' {space} č ć ž'
+    ],
+    'shift': [
+      'Q W E R T Y U I O P {bksp}',
+      'A S D F G H J K L Š Đ',
+      '{s} Z X C V B N M ! ? {s}',
+      ' {space} Č Ć Ž'
+    ],
+    'meta1': [
+      '1 2 3 4 5 6 7 8 9 0 {bksp}',
+      '- / : ; ( ) \u20ac & @ {enter}',
+      '{meta2} . , ? ! \' " {meta2}',
+      '{normal} {space} {normal} {accept}'
+    ],
+    'meta2': [
+      '[ ] { } # % ^ * + = {bksp}',
+      '_ \\ | ~ < > $ \u00a3 \u00a5 {enter}',
+      '{meta1} . , ? ! \' " {meta1}',
+      '{normal} {space} {normal} {accept}'
+    ]
+  }
+  })
+  .autocomplete({
+    source: tagovi,
+    select: function (event, ui) {
+      //alert(arraySearch(tagovi, ui.item));
+       otvori(arraySearch(tagovi, ui.item.value));
+    }
+  })
+  // position options added after v1.23.4
+  .addAutocomplete({
+    position : {
+      of : null,        // when null, element will default to kb.$keyboard
+      my : 'right top', // 'center top', (position under keyboard)
+      at : 'left top',  // 'center bottom',
+      collision: 'flip'
+    }
+  });
+
+  ki=$('#keyboard').getkeyboard();
+};
 
 function otvori(id){
   /* home */
@@ -502,11 +668,20 @@ function otvori(id){
     $('#pinch-zoom-image-id').show();
   },100);
   aktualni=id;
+  ki.close();
+  setTimeout(function(){$('.header-search-input').val('');},200);
+  $('.unutra').show();
+  $('.desnodiv').removeClass('desnovidljiv').removeClass('desnonevidljiv');
+  infoop(id);
+  reset();
 }
 
 function home(){
   $('.pinch-zoom-container').hide();
   $('.homepejdz').show();
+  $('.unutra').hide();
+  $('.desnodiv').removeClass('desnovidljiv').removeClass('desnonevidljiv');
+  reset();
 }
 
 function prosli(){
@@ -523,6 +698,66 @@ function sljedeci(){
     otvori(0);
  }
 }
+
+function infoop(id){
+  if(lista[id].audio===true){$('.audio').show();}else{$('.audio').hide();}
+  if(lista[id].video===true){$('.video').show();}else{$('.video').hide();}
+  $('.desnodiv').data('id',id);
+}
+
+function info(){
+  desnidiv();
+}
+
+function audio(){
+  desnidiv();
+
+  setTimeout(function(){
+    $('.audiome').height('40px');
+    $('.audiome')[0].play();
+  }, 500);
+
+}
+
+function video(){
+  desnidiv();
+
+  setTimeout(function(){
+    $('.videome').height('260px');
+    $('.videome')[0].play();
+    $('.videome').on('ended', function(){
+        this.webkitExitFullscreen();
+      });
+  }, 500);
+}
+
+function desnidiv(){
+  var id=$('.desnodiv').data('id');
+  if($('.desnodiv').hasClass('desnovidljiv')){
+  }else{
+    $('.desnodiv').removeClass('desnonevidljiv').addClass('desnovidljiv');
+  }
+
+  /* ubacivanje sadržaja */
+  var html='';
+
+  if(lista[id].video===true)html+='<p style="margin-bottom:0px;">Video presentation:</p><video width="460" height="240" controls class="videome"><source src="output/'+lista[id].filename+'.mp4" type="video/mp4"></video>';
+
+  if(lista[id].audio===true)html+='<p style="margin-bottom:0px;">Audio presentation:</p><audio src="output/'+lista[id].filename+'.mp3" controls class="audiome"> </audio>';  
+
+  html+='<div class="naslov">'+lista[id].naslov+'</div>';
+  html+='<div class="autori">'+lista[id].autori+'</div>';
+  html+='<div class="opis">'+lista[id].opis+'</div>';
+
+  $('.desnodiv .ubacaj').html(html);
+
+}
+
+function reset(){
+  $('.audiome')[0].pause();
+  $('.videome')[0].pause();
+}
+
     </script>
 
 
@@ -532,6 +767,8 @@ function sljedeci(){
 
     <!-- DESNO DIV -->
     <div class="desnodiv grej">
+      <div class="zatvori"><i class="fa fa-times" aria-hidden="true"></i></div>
+      <div class="ubacaj"></div>
     </div>  
 
     <!-- DOLJE DIV 
@@ -545,12 +782,11 @@ function sljedeci(){
       </div>
       <div class="kontrole">
         <span onclick="prosli()"><i class="fa fa-arrow-left" aria-hidden="true"></i></span> &nbsp;
-        <span onclick="zoomIn()"><i class="fa fa-search-plus" aria-hidden="true"></i></span> &nbsp; 
-        <span onclick="zoomOut()"><i class="fa fa-search-minus" aria-hidden="true"></i></span> &nbsp;    
+        <span onclick="zoomIn()" class="unutra"><i class="fa fa-search-plus" aria-hidden="true"></i></span> &nbsp; 
+        <span onclick="zoomOut()" class="unutra"><i class="fa fa-search-minus" aria-hidden="true"></i></span> &nbsp;    
         <span onclick="sljedeci()"><i class="fa fa-arrow-right" aria-hidden="true"></i></span>
       </div>
-      <div class="infoop">
-         <input type="text" class="header-search-input">
+      <div class="infoop unutra">
         <span onclick="info()" class="info"><i class="fa fa-info-circle" aria-hidden="true"></i></span> &nbsp;
         <span onclick="audio()" class="audio"><i class="fa fa-headphones" aria-hidden="true"></i></span> &nbsp; 
         <span onclick="video()" class="video"><i class="fa fa-video-camera" aria-hidden="true"></i></span>
@@ -561,6 +797,10 @@ function sljedeci(){
       <img id="pinch-zoom-image-id" class="pinch-zoom-image" src="images/loading.png"><!--  onload="onLoad()" -->
     </div>
     <div class="homepejdz">
+      <div class="heder">
+        <img src="images/web_zaglavlje.svg" alt="zaglavlje" height="150">
+        <p><i class="fa fa-search" aria-hidden="true" style="color:#000;padding:3px; font-size:28px;" ></i>&nbsp;<input type="text" class="header-search-input" id="keyboard" placeholder=" Search... "></p>
+      </div>
       <div class="skroler">
         
       </div>
